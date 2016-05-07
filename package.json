@@ -1,0 +1,19 @@
+{
+  "name": "git-hook-utils",
+  "version": "1.0.0",
+  "description": "A Set of git-hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "promptly": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.4"
+  }
+}
