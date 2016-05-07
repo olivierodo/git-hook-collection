@@ -1,5 +1,5 @@
 var expect = require('chai').expect,
-Emoji = require('../../../src/hooks/emoji');
+Emoji = require('../../../../src/hooks/commit-msg/emoji');
 
 describe('#hooks/emoji', function() {
   it('Should return the same message if any word match', function() {
