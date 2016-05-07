@@ -17,5 +17,10 @@ module.exports = {
         return resolve([]);
       }
     });
-  }
+  },
+
+  run : function(options) {
+    var hook = require(['./hooks',options.type, options.name].join('/'));
+    return hook.apply(this, options.args);
+  },
 };
