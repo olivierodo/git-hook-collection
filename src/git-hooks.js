@@ -21,6 +21,6 @@ module.exports = {
 
   run : function(options) {
     var hook = require(['./hooks',options.type, options.name].join('/'));
-    return hook.apply(this, options.args);
+    return hook.apply(this, options.args.concat([require('./status')]));
   },
 };
