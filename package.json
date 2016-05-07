@@ -9,11 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "bluebird": "^3.3.5",
     "promptly": "^1.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.8.0",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
+    "mock-fs": "^3.9.0",
     "sinon": "^1.17.4"
   }
 }
