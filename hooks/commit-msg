@@ -6,19 +6,19 @@ var fs = require('fs'),
   hookName = __filename.split(/[\\/]/).pop();
 
 GitHook.get(hookName)
-  .then(function(hooks) {
-      var text = fs.readFileSync(args[0], "utf8");
-      for(var i=0, l=hooks.length; i < l; i++) {
-        try{
-          text = GitHook.run({
-              type : hookName,
-              name : hooks[i],
-              args : [text]
-          });
-        } catch(e) {
-          process.exit(1);
-        }
-        fs.writeFileSync(args[0], text);
+.then(function(hooks) {
+    var text = fs.readFileSync(args[0], "utf8");
+    for(var i=0, l=hooks.length; i < l; i++) {
+      try{
+        text = GitHook.run({
+            type : hookName,
+            name : hooks[i],
+            args : [text]
+        });
+      } catch(e) {
+        process.exit(1);
       }
-      process.exit(0);
-  });
+      fs.writeFileSync(args[0], text);
+    }
+    process.exit(0);
+});
