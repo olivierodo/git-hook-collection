@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var fs = require('fs'),
+  colors = require('colors'),
   GitHook = require('../src/git-hooks'),
   args = process.argv.slice(2);
   hookName = __filename.split(/[\\/]/).pop();
@@ -8,12 +9,16 @@ GitHook.get(hookName)
   .then(function(hooks) {
       var text = fs.readFileSync(args[0], "utf8");
       for(var i=0, l=hooks.length; i < l; i++) {
+        try{
           text = GitHook.run({
               type : hookName,
               name : hooks[i],
               args : [text]
           });
-          fs.writeFileSync(args[0], text);
+        } catch(e) {
+          process.exit(1);
+        }
+        fs.writeFileSync(args[0], text);
       }
       process.exit(0);
   });
