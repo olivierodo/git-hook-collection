@@ -1,5 +1,5 @@
 
-module.exports = function(msg) {
+module.exports = function(msg, s) {
   var emo = '',
   list = {
     'fix' : 'wrench',
