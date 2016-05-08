@@ -5,7 +5,7 @@ Tested on Github, Bitbucket. Have to be tested on Gitlab.
 
 ### Preview
 
-![previem](./img/emoji.png')
+![preview](./img/emoji.png')
 
 ### Emoji available
 | emoji | if the fisrt word is : |
