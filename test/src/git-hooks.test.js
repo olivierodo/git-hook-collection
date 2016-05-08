@@ -1,6 +1,7 @@
 var expect = require('chai').expect,
 sinon = require('sinon'),
 fs = require('fs'),
+YAML = require('yamljs'),
 GitHooks = require('../../src/git-hooks');
 
 describe('#git-hooks', function() {
@@ -34,7 +35,7 @@ describe('#git-hooks', function() {
 
     it('Should return the hooks list from .githook the good section', function(done) {
       sandbox.stub(fs, 'readFile', function (path, callback) {
-        callback(null, JSON.stringify({'prepare-commit-msg':["hook1"]}));
+        callback(null, YAML.stringify({'prepare-commit-msg':["hook1"]}));
       });
       GitHooks.get('prepare-commit-msg').then(function(response) {
         expect(response).to.be.deep.equal(['hook1']);
@@ -44,7 +45,7 @@ describe('#git-hooks', function() {
 
     it('Should return tan empty array if the hook section doesn\'t exist', function(done) {
       sandbox.stub(fs, 'readFile', function (path, callback) {
-        callback(null, JSON.stringify({'prepare-commit-msg':["hook1"]}));
+        callback(null, YAML.stringify({'prepare-commit-msg':["hook1"]}));
       });
       GitHooks.get('commit-msg').then(function(response) {
         expect(response).to.be.deep.equal([]);

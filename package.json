@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Collection of various git hooks ready to use",
   "scripts": {
+    "postinstall": "./bin/install",
     "test": "NODE_ENV=test mocha test -R spec --recursive",
     "test-watch": "NODE_ENV=test mocha test -R landing --recursive -w"
   },
@@ -25,12 +26,12 @@
     "email": "hi@olivierodo.com",
     "url": "http://olivierodo.com"
   },
-  "license": "ISC",
   "dependencies": {
     "app-root-dir": "^1.0.2",
     "bluebird": "^3.3.5",
     "colors": "^1.1.2",
-    "promptly": "^1.1.0"
+    "promptly": "^1.1.0",
+    "yamljs": "^0.2.7"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",

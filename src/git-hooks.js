@@ -1,4 +1,5 @@
 var fs = require('fs'),
+  YAML = require('yamljs'),
   Promise = require('bluebird');
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
       try {
         fs.readFile(self.configFile, function (err,content) {
           if (err) return resolve([]);
-          return resolve(JSON.parse(content)[hookType] || []);
+          return resolve(YAML.parse(content.toString())[hookType] || []);
         });
       } catch(err) {
         return resolve([]);
