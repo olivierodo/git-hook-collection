@@ -1,12 +1,30 @@
 {
-  "name": "git-hook-utils",
+  "name": "git-hook-collection",
   "version": "1.0.0",
-  "description": "A Set of git-hooks",
-  "main": "index.js",
+  "description": "Collection of various git hooks ready to use",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha test -R spec --recursive",
+    "test-watch": "NODE_ENV=test mocha test -R landing --recursive -w"
   },
-  "author": "",
+  "keywords": [
+    "git",
+    "hook",
+    "git-hook",
+    "github emoji",
+    "commit",
+    "emoji",
+    "collection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olivierodo/git-hook-collection.git"
+  },
+  "license": "ISC",
+  "author": {
+    "name": "Olivier Rodomond",
+    "email": "hi@olivierodo.com",
+    "url": "http://olivierodo.com"
+  },
   "license": "ISC",
   "dependencies": {
     "app-root-dir": "^1.0.2",
