@@ -1,8 +1,9 @@
 [![Build Status](https://travis-ci.org/olivierodo/git-hook-collection.svg?branch=master)](https://travis-ci.org/olivierodo/git-hook-collection)
 
-# NODEJS GIT-HOOKS
+# GIT-HOOK-COLLECTION (work in progress)
 
 Collection of various git hooks ready to use for nodeJS.
+
 Let's have fun with git hooks!
 
 ## Getting started
