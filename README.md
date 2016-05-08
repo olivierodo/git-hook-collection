@@ -2,12 +2,12 @@
 
 # NODEJS GIT-HOOKS
 
-List of git-hooks to install on your projects.
+Collection of various git hooks ready to use for nodeJS.
 
 ## Getting started
 
 ```
-$ npm install git-hook-node --save-dev
+$ npm install git-hook-collection --save-dev
 ```
 
 during the installation you have to choose what is the hook you wants to add.
@@ -17,7 +17,9 @@ during the installation you have to choose what is the hook you wants to add.
 
 Prefix your commit message with an emoji.
 
-:PREVIEW
+![previem](./img/emoji.png')
+
+[More detail](./doc/emoji.md)
 
 
 ## Test before push your code
