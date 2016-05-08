@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var promptly = require('promptly'),
+  fs = require('fs'),
+  configFile = require('app-root-dir').get() + '/.githooks';
+
+promptly.confirm('Do you want to install all the hooks from the collection',{'default': 'y'}, function (err, value) {
+    var fileContent = fs.readFileSync(__dirname+'/../default-config.yml', "utf8");
+    if(!value) {
+      fs.writeFileSync(configFile, '');
+      fileContent.toString().split('\n').forEach(function(line) {
+        if (-1 !== line.indexOf(' - ')) line = '#' + line;
+        fs.appendFileSync(configFile, line.toString() + "\n");
+      });
+    } else {
+      fs.writeFileSync(configFile, fileContent);
+    }
+});
