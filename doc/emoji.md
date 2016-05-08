@@ -1,11 +1,13 @@
 # Emoji (commit-msg hook)
 
 The Emoji's hook add an emoji at the begining of your commit message.
-Tested on Github, Bitbucket. Have to be tested on Gitlab.
+- [x] Github
+- [x] Bitbucket
+- [ ] Gitlab (to test)
 
 ### Preview
 
-![preview](./img/emoji.png')
+![preview](img/emoji.png')
 
 ### Emoji available
 | emoji | if the fisrt word is : |

@@ -17,9 +17,9 @@ during the installation you have to choose what is the hook you wants to add.
 
 Prefix your commit message with an emoji.
 
-![preview](./doc/img/emoji.png')
+![preview](doc/img/emoji.png')
 
-[More detail](./doc/emoji.md)
+[More detail](doc/emoji.md)
 
 
 ## Test before push your code
