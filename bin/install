@@ -1,8 +1,15 @@
 #!/usr/bin/env node
 
+if ('test' === process.env.NODE_ENV) process.exit(0);
 var promptly = require('promptly'),
   fs = require('fs'),
-  configFile = require('app-root-dir').get() + '/.githooks';
+  projectPath = require('app-root-dir').get();
+  configFile = projectPath + '/.githooks';
+
+  require('shelljs/global');
+
+mv(projectPath+'/.git/hooks', projectPath+'/.git/hooks.bk');
+ln('-s', '../node_modules/git-hook-collection/hooks', projectPath+'/.git/hooks');
 
 promptly.confirm('Do you want to install all the hooks from the collection',{'default': 'y'}, function (err, value) {
     var fileContent = fs.readFileSync(__dirname+'/../default-config.yml', "utf8");
