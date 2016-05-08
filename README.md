@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/olivierodo/git-hook-collection.svg?branch=master)](https://travis-ci.org/olivierodo/git-hook-collection)
+
 # NODEJS GIT-HOOKS
 
 List of git-hooks to install on your projects.
@@ -5,11 +7,10 @@ List of git-hooks to install on your projects.
 ## Getting started
 
 ```
-$ npm install -g git-hook-node
-$ cd YOUR_PROJECT
-$ git-hook-node
+$ npm install git-hook-node --save-dev
 ```
 
+during the installation you have to choose what is the hook you wants to add.
 
 
 ## Github emoji message
@@ -17,6 +18,7 @@ $ git-hook-node
 Prefix your commit message with an emoji.
 
 :PREVIEW
+
 
 ## Test before push your code
 
