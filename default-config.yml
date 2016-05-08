@@ -1,3 +1,6 @@
 # action the developer commit message
 commit-msg:
   - emoji # Prefix the commit message with an emoji (https://github.com/olivierodo/git-hook-collection/blob/master/doc/emoji.md)
+
+pre-push:
+  - testBuddy # run npm test

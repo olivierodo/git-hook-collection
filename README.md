@@ -3,6 +3,7 @@
 # NODEJS GIT-HOOKS
 
 Collection of various git hooks ready to use for nodeJS.
+Let's have fun with git hooks!
 
 ## Getting started
 
@@ -13,7 +14,7 @@ $ npm install git-hook-collection --save-dev
 during the installation you have to choose what is the hook you wants to add.
 
 
-## Github emoji message
+## Emoji
 
 Prefix your commit message with an emoji.
 
@@ -22,7 +23,11 @@ Prefix your commit message with an emoji.
 [More detail](doc/emoji.md)
 
 
-## Test before push your code
+## Test Buddy - before push your code
+
+A nice buddy, who runs the test before let you push
+
+![preview](doc/img/test-buddy.gif)
 
 ## Check before commit
 
