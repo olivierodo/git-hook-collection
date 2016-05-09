@@ -30,13 +30,16 @@ A nice buddy, who runs the test before let you push
 
 ![preview](doc/img/test-buddy.gif)
 
-## Check before commit
+> Your `npm test` command have to be configured
 
-## Show you the todo needs to be done
 
-## Have a notification if the package.json get updated
+[comment]: <> (## Check before commit)
 
-## Npm install if the package.json get updated
+[comment]: <> (## Show you the todo needs to be done)
 
-## Deploy to Heroku if you push on master
+[comment]: <> (## Have a notification if the package.json get updated)
+
+[comment]: <> (## Npm install if the package.json get updated)
+
+[comment]: <> (## Deploy to Heroku if you push on master)
 
